@@ -5,6 +5,18 @@ class Game {
 
   start() {
     this.player = new Player()
+    this.attachEventListeners()
+  }
+
+  attachEventListeners() {
+    window.addEventListener('keydown', (event) => {
+      const input = event.key
+      if (input === 'ArrowLeft') {
+        this.player.moveLeft()
+      } else if (input === 'ArrowRight') {
+        this.player.moveRight()
+      }
+    })
   }
 }
 
