@@ -25,8 +25,8 @@
 - [x] Create the logic for the player to move
 - [x] Make the player move with Arrow Keys
 - [x] Create obstacle
-- [ ] Move the obstacle
-- [ ] Create multiple obstacles
+- [x] Move the obstacle
+- [x] Create multiple obstacles
 - [ ] Create the collision logic
 - [ ] (Extra ?) Make the obstacles appear randomly on the screen
 - [ ] (Extra) Limit player movement to the play screen

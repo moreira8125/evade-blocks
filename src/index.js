@@ -7,8 +7,9 @@ class Game {
   start() {
     this.player = new Player()
     this.attachEventListeners()
-    const obstacle = new Obstacle()
-    this.obstacles.push(obstacle)
+   
+    this.createObstacles()
+    this.moveObstacles()
   }
 
   attachEventListeners() {
@@ -20,6 +21,21 @@ class Game {
         this.player.moveRight()
       }
     })
+  }
+
+  moveObstacles() {
+    setInterval(() => {
+      this.obstacles.forEach((obstacle) => {
+        obstacle.moveDown()
+      })
+    }, 60)
+  }
+
+  createObstacles() {
+    setInterval(() => {
+      const obstacle = new Obstacle()
+      this.obstacles.push(obstacle)
+    }, 1000)
   }
 }
 
@@ -77,8 +93,12 @@ class Obstacle {
 
     const board = document.getElementById('board')
     board.appendChild(obstacleDOM)
-
     return obstacleDOM
+  }
+
+  moveDown() {
+    this.positionY -= 1
+    this.domElement.style.bottom = `${this.positionY}vh` 
   }
 }
 
