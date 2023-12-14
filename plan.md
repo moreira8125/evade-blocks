@@ -6,8 +6,7 @@
 - [x] Define what are the extras (prioritize them).
 - [x] Create the folder structure
 - [x] Create the files
-- [ ] Start coding
-
+- [x] Start coding
 
 ## Steps for MVP
 
@@ -21,8 +20,8 @@
 
 ## Plan
 
-- [ ] Create the game board (full screen)
-- [ ] Make a player appear on the screen
+- [x] Create the game board (full screen)
+- [x] Make a player appear on the screen
 - [ ] Create the logic for the player to move
 - [ ] Make the player move with Arrow Keys
 - [ ] Create obstacle
