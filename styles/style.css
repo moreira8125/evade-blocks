@@ -10,6 +10,11 @@ html, body {
 }
 
 #player {
-  background-color: pink;
   position: absolute;
+  background-color: pink;
+}
+
+.obstacles {
+  position: absolute;
+  background-color: red;
 }

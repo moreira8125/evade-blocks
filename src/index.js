@@ -1,11 +1,14 @@
 class Game {
   constructor() {
     this.player = null
+    this.obstacles = []
   }
 
   start() {
     this.player = new Player()
     this.attachEventListeners()
+    const obstacle = new Obstacle()
+    this.obstacles.push(obstacle)
   }
 
   attachEventListeners() {
@@ -53,6 +56,37 @@ class Player {
     this.domElement.style.left = `${this.positionX}vw`
   }
 }
+
+class Obstacle {
+  constructor() {
+    this.width = 10
+    this.height = 5
+    this.positionX = 50 - this.width / 2
+    this.positionY = 95 
+
+    this.domElement = this.createElement()
+  }
+
+  createElement() {
+    const obstacleDOM = document.createElement('div')
+    obstacleDOM.className = 'obstacles'
+    obstacleDOM.style.width = `${this.width}vw`
+    obstacleDOM.style.height = `${this.height}vh`
+    obstacleDOM.style.left = `${this.positionX}vw`
+    obstacleDOM.style.bottom = `${this.positionY}vh`
+
+    const board = document.getElementById('board')
+    board.appendChild(obstacleDOM)
+
+    return obstacleDOM
+  }
+}
+
+
+
+
+
+
 
 
 const game = new Game()

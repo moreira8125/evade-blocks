@@ -23,8 +23,8 @@
 - [x] Create the game board (full screen)
 - [x] Make a player appear on the screen
 - [x] Create the logic for the player to move
-- [ ] Make the player move with Arrow Keys
-- [ ] Create obstacle
+- [x] Make the player move with Arrow Keys
+- [x] Create obstacle
 - [ ] Move the obstacle
 - [ ] Create multiple obstacles
 - [ ] Create the collision logic
