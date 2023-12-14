@@ -30,6 +30,16 @@ class Player {
     board.appendChild(nodeDOM)
     return nodeDOM
   }
+
+  moveRight() {
+    this.positionX += 1
+    this.domElement.style.left = `${this.positionX}vw`
+  }
+
+  moveLeft() {
+    this.positionX -= 1
+    this.domElement.style.left = `${this.positionX}vw`
+  }
 }
 
 
