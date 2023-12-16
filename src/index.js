@@ -10,15 +10,6 @@ class Game {
 
     this.createObstacles();
     this.moveObstacles();
-
-    // setTimeout(() => {
-    //   clearInterval(this.moveInterval);
-    //   console.log("Player ->", this.player.domElement.getBoundingClientRect());
-    //   console.log(
-    //     "---------------------------------------------------------------------------------------"
-    //   );
-    //   console.log("Obstacle ->", this.obstacles[0]);
-    // }, 3000);
   }
 
   detectCollision(obstacle) {
@@ -103,7 +94,7 @@ class Obstacle {
   constructor() {
     this.width = 10;
     this.height = 5;
-    this.positionX = 50 - this.width / 2;
+    this.positionX = Math.floor(Math.random() * (100 - this.width + 1));
     this.positionY = 95;
 
     this.domElement = this.createElement();
